@@ -40,7 +40,7 @@ const TodoList = () => {
               onClick={() => handleDestroy(item.id)}
             ></button>
           </div>
-        </li>
+        </li> 
       ))}
     </ul>
   );
