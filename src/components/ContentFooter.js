@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { changeActiveFilter ,clearCompleted } from "../redux/todos/todosSlice";
+import { changeActiveFilter ,clearCompleted ,selectTodos } from "../redux/todos/todosSlice";
 
 const ContentFooter = () => {
   const items = useSelector((state) => state.todos.items);
@@ -8,7 +8,7 @@ const ContentFooter = () => {
 
   const dispatch = useDispatch();
 
-  const activeFilter = useSelector((state) => state.todos.activeFilter);
+  const activeFilter = useSelector(selectTodos);
   return (
     <footer className="footer">
       <span className="todo-count">
